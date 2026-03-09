@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal: #2C2B27;
+  --color-warm-grey: #6B6860;
+  --color-light-grey: #9E9A94;
+  --color-sage: #8FB471;
+  --color-cream: #EDE4D3;
+  --color-warm-white: #FAF7F2;
+  --color-border: #D9D3C8;
+
+  /* Both serif and sans utilities resolve to General Sans */
+  --font-serif: "General Sans", system-ui, sans-serif;
+  --font-sans: "General Sans", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-general-sans), "General Sans", system-ui, sans-serif;
+  color: var(--color-charcoal);
+  background-color: var(--color-warm-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Warm mesh gradient — hero backgrounds */
+.gradient-bg {
+  background-color: #c5d5b0;
+  background-image:
+    radial-gradient(ellipse at 12% 82%, rgba(130, 178, 100, 0.75) 0%, transparent 48%),
+    radial-gradient(ellipse at 82% 14%, rgba(218, 200, 155, 0.70) 0%, transparent 48%),
+    radial-gradient(ellipse at 72% 78%, rgba(200, 182, 128, 0.55) 0%, transparent 42%),
+    radial-gradient(ellipse at 32% 25%, rgba(168, 205, 140, 0.60) 0%, transparent 42%);
+}
+
+/* God rays subtle pulse */
+@keyframes ray-pulse {
+  0%   { opacity: 0.6; transform: rotate(var(--ray-rotate, 0deg)) scaleX(1); }
+  100% { opacity: 1;   transform: rotate(var(--ray-rotate, 0deg)) scaleX(1.15); }
+}
+
+/* Italic emphasis uses Instrument Serif — in utilities layer to win over Tailwind base */
+@layer utilities {
+  .font-serif em,
+  h1 em, h2 em, h3 em {
+    font-family: var(--font-instrument), "Instrument Serif", Georgia, serif;
+    font-style: italic;
+  }
+}
