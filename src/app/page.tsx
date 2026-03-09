@@ -16,13 +16,10 @@ export default function Home() {
         <div className="relative z-10 flex flex-1 items-center justify-center px-8 md:px-16 pt-32 pb-24">
           <div className="max-w-3xl text-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl leading-tight text-[var(--color-charcoal)] font-light tracking-tight">
-              Crafting <em>human-centered experiences</em>
-              <br />
-              in AI and emerging technologies.
+              Making complex systems feel <em>human.</em>
             </h1>
             <p className="mt-6 text-sm md:text-base text-[var(--color-warm-grey)] max-w-xl mx-auto leading-relaxed">
-              Currently @Conductor as a full-stack Product and UX Designer
-              creating AI experiences.
+              Currently building AI features @ Conductor as a full-stack Product and UX Designer.
             </p>
           </div>
         </div>
