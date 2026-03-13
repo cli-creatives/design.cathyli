@@ -117,58 +117,72 @@ export default function AITopicMapPage() {
       </div>
 
       {/* ── 30 Second Insight / Highlight / Impact ────────────────────────── */}
-      <div className="px-8 md:px-12 max-w-4xl mx-auto w-full mb-16">
+      <div className="w-full mb-16" style={{ backgroundColor: "#C1D7C5" }}>
+        <div className="px-8 md:px-12 max-w-4xl mx-auto w-full py-12">
 
-        {/* ── 30 Second Insight ───────────────────────────────────────────── */}
-        <div className="mb-12">
-          <p className="text-[10px] tracking-[0.15em] uppercase text-[var(--color-light-grey)] mb-4 font-medium">
+          {/* Label */}
+          <p className="font-serif text-2xl text-[var(--color-charcoal)] mb-5">
             30 Second Insight
           </p>
-          <p className={`${bodyText} text-[18px] text-[var(--color-charcoal)]`}>
+
+          {/* Insight text — full width */}
+          <p className={`${bodyText} text-[18px] text-[var(--color-charcoal)] mb-10`}>
             Conductor Creator is an enterprise SEO and content performance
             platform. As search increasingly shifts toward AI-driven discovery,
             the platform needed to help users understand their content visibility
             in the context of large language models — rather than only through
             keyword rankings.
           </p>
-        </div>
 
-        {/* ── Project Highlight ───────────────────────────────────────────── */}
-        <div className="mb-12">
-          <p className="text-[10px] tracking-[0.15em] uppercase text-[var(--color-light-grey)] mb-4 font-medium">
-            Project Highlight
-          </p>
-          <ul className="space-y-3">
-            {[
-              "Designed a semantic topic mapping system that transforms a website's pages into an interactive spatial landscape of topic clusters.",
-              "Built a contextual insight panel that connects visual exploration to concrete prioritized content actions.",
-            ].map((item) => (
-              <li key={item} className="flex gap-3">
-                <span className="mt-[0.55em] w-1 h-1 rounded-full bg-[var(--color-charcoal)] shrink-0" />
-                <span className={`${bodyText} text-[var(--color-charcoal)]`}>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+          {/* Divider */}
+          <hr className="border-t border-[var(--color-charcoal)]/20 mb-10" />
 
-        {/* ── Impact summary ──────────────────────────────────────────────── */}
-        <div>
-          <p className="text-[10px] tracking-[0.15em] uppercase text-[var(--color-light-grey)] mb-4 font-medium">
-            Impact
-          </p>
-          <ul className="space-y-3">
-            {[
-              "200+ enterprise customer accounts enrolled in the alpha program within weeks of launch.",
-              "More than 400 structured feedback interactions collected through internal strategist sessions and Slack feedback channels.",
-              "Established a new conceptual model for evaluating website content through topic structure rather than keyword rankings.",
-              "Helped inform the design direction for the company's emerging AEO initiatives.",
-            ].map((item) => (
-              <li key={item} className="flex gap-3">
-                <span className="mt-[0.55em] w-1 h-1 rounded-full bg-[var(--color-light-grey)] shrink-0" />
-                <span className={bodyText}>{item}</span>
-              </li>
-            ))}
-          </ul>
+          {/* Two-column row: Project Highlight | Impact */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+            {/* Project Highlight */}
+            <div>
+              <p className="font-serif text-2xl text-[var(--color-charcoal)] mb-4">
+                Project Highlight
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "Designed a semantic topic mapping system that transforms a website's pages into an interactive spatial landscape of topic clusters.",
+                  "Built a contextual insight panel that connects visual exploration to concrete prioritized content actions.",
+                ].map((item) => (
+                  <li key={item} className="flex gap-3">
+                    <span className="mt-[0.55em] w-1 h-1 rounded-full bg-[var(--color-charcoal)] shrink-0" />
+                    <span className={`${bodyText} text-[var(--color-charcoal)]`}>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Impact */}
+            <div>
+              <p className="font-serif text-2xl text-[var(--color-charcoal)] mb-4">
+                Impact
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "200+ enterprise customer accounts enrolled in the alpha program within weeks of launch.",
+                  "More than 400 structured feedback interactions collected through internal strategist sessions and Slack feedback channels.",
+                  "Established a new conceptual model for evaluating website content through topic structure rather than keyword rankings.",
+                  "Helped inform the design direction for the company's emerging AEO initiatives.",
+                ].map((item) => (
+                  <li key={item} className="flex gap-3">
+                    <span className="mt-[0.55em] w-1 h-1 rounded-full bg-[var(--color-charcoal)]/40 shrink-0" />
+                    <span className={bodyText}>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+          </div>
+
+          {/* Bottom divider */}
+          <hr className="border-t border-[var(--color-charcoal)]/20 mt-10" />
+
         </div>
       </div>{/* end 30s insight / highlight / impact wrapper */}
 
