@@ -16,10 +16,22 @@ const sectionHeading =
   "font-serif text-3xl md:text-4xl text-[var(--color-charcoal)] leading-tight mb-6";
 const subHeading =
   "font-serif text-xl text-[var(--color-charcoal)] leading-snug mb-3 mt-10";
-const bodyText =
-  "text-[var(--color-warm-grey)] leading-[1.85] text-[17px]";
-const sectionClass =
-  "scroll-mt-32";
+const bodyText = "text-[var(--color-warm-grey)] leading-[1.85] text-[17px]";
+const sectionClass = "scroll-mt-32";
+
+const sidebarSections = [
+  { id: "swarm-initiative",     label: "Swarm Initiative" },
+  { id: "understanding-system", label: "Understanding the System" },
+  { id: "users",                label: "Users" },
+  { id: "product-direction",    label: "Product Direction" },
+  { id: "the-pivot",            label: "The Pivot" },
+  { id: "visualization",        label: "Visualization" },
+  { id: "actionability",        label: "Actionability" },
+  { id: "workflow",             label: "Workflow" },
+  { id: "challenges",           label: "Challenges" },
+  { id: "impact",               label: "Impact" },
+  { id: "whats-next",           label: "What's Next" },
+];
 
 export default function AITopicMapPage() {
   return (
@@ -44,46 +56,57 @@ export default function AITopicMapPage() {
         </h1>
 
         <p className="text-xl text-[var(--color-warm-grey)] max-w-lg leading-relaxed mb-12">
-          Designing a semantic intelligence system for AI-driven search
+          Designing a semantic intelligence system that transforms websites into
+          topic landscapes, helping enterprise content teams understand and act
+          on AI-driven search visibility
         </p>
 
-        {/* Metadata row */}
-        <div className="flex flex-wrap gap-10 pt-8 border-t border-[var(--color-border)]">
+        {/* ── Metadata row ────────────────────────────────────────────────── */}
+        <div className="flex flex-wrap gap-x-10 gap-y-6 pt-8 border-t border-[var(--color-border)] mb-0">
           <div>
             <p className="text-[10px] tracking-[0.15em] uppercase text-[var(--color-light-grey)] mb-1.5 font-medium">
-              Product
+              My Role
             </p>
-            <p className="text-sm text-[var(--color-charcoal)]">
-              Conductor Intelligence
+            <p className="text-sm text-[var(--color-charcoal)]">Product Designer</p>
+            <p className="text-sm text-[var(--color-warm-grey)] mt-0.5 leading-relaxed">
+              UX exploration, visualization design,<br />
+              interaction design, internal user validation
             </p>
           </div>
           <div>
             <p className="text-[10px] tracking-[0.15em] uppercase text-[var(--color-light-grey)] mb-1.5 font-medium">
               Timeline
             </p>
-            <p className="text-sm text-[var(--color-charcoal)]">Q1–Q2 2025 · 8-week swarm</p>
-          </div>
-          <div>
-            <p className="text-[10px] tracking-[0.15em] uppercase text-[var(--color-light-grey)] mb-1.5 font-medium">
-              Role
-            </p>
-            <p className="text-sm text-[var(--color-charcoal)]">
-              Product Designer
-            </p>
+            <p className="text-sm text-[var(--color-charcoal)]">Q1–Q2 2025</p>
+            <p className="text-sm text-[var(--color-warm-grey)] mt-0.5">8-week swarm, March to May 2025</p>
           </div>
           <div>
             <p className="text-[10px] tracking-[0.15em] uppercase text-[var(--color-light-grey)] mb-1.5 font-medium">
               Team
             </p>
             <p className="text-sm text-[var(--color-charcoal)]">
-              PM, ML engineers, data platform engineers
+              PM, ML engineers,<br />data platform engineers
             </p>
           </div>
+          <div>
+            <p className="text-[10px] tracking-[0.15em] uppercase text-[var(--color-light-grey)] mb-1.5 font-medium">
+              Product
+            </p>
+            <p className="text-sm text-[var(--color-charcoal)]">Conductor Creator</p>
+          </div>
+          <div>
+            <p className="text-[10px] tracking-[0.15em] uppercase text-[var(--color-light-grey)] mb-1.5 font-medium">
+              Deliverable
+            </p>
+            <p className="text-sm text-[var(--color-charcoal)]">Web App</p>
+            <p className="text-sm text-[var(--color-warm-grey)] mt-0.5">Alpha shipped June 2025</p>
+          </div>
         </div>
+
       </header>
 
-      {/* ── Cover ─────────────────────────────────────────────────────────── */}
-      <div className="w-full aspect-[16/9] mb-20 relative overflow-hidden">
+      {/* ── Cover image ───────────────────────────────────────────────────── */}
+      <div className="w-full aspect-[16/9] my-16 relative overflow-hidden">
         <Image
           src="/images/ai-topic-map-cover.png"
           alt="AI Topic Map interface showing a spatial bubble map of topic clusters with a Content Opportunities panel"
@@ -93,6 +116,62 @@ export default function AITopicMapPage() {
         />
       </div>
 
+      {/* ── 30 Second Insight / Highlight / Impact ────────────────────────── */}
+      <div className="px-8 md:px-12 max-w-4xl mx-auto w-full mb-16">
+
+        {/* ── 30 Second Insight ───────────────────────────────────────────── */}
+        <div className="mb-12">
+          <p className="text-[10px] tracking-[0.15em] uppercase text-[var(--color-light-grey)] mb-4 font-medium">
+            30 Second Insight
+          </p>
+          <p className={`${bodyText} text-[18px] text-[var(--color-charcoal)]`}>
+            Conductor Creator is an enterprise SEO and content performance
+            platform. As search increasingly shifts toward AI-driven discovery,
+            the platform needed to help users understand their content visibility
+            in the context of large language models — rather than only through
+            keyword rankings.
+          </p>
+        </div>
+
+        {/* ── Project Highlight ───────────────────────────────────────────── */}
+        <div className="mb-12">
+          <p className="text-[10px] tracking-[0.15em] uppercase text-[var(--color-light-grey)] mb-4 font-medium">
+            Project Highlight
+          </p>
+          <ul className="space-y-3">
+            {[
+              "Designed a semantic topic mapping system that transforms a website's pages into an interactive spatial landscape of topic clusters.",
+              "Built a contextual insight panel that connects visual exploration to concrete prioritized content actions.",
+            ].map((item) => (
+              <li key={item} className="flex gap-3">
+                <span className="mt-[0.55em] w-1 h-1 rounded-full bg-[var(--color-charcoal)] shrink-0" />
+                <span className={`${bodyText} text-[var(--color-charcoal)]`}>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* ── Impact summary ──────────────────────────────────────────────── */}
+        <div>
+          <p className="text-[10px] tracking-[0.15em] uppercase text-[var(--color-light-grey)] mb-4 font-medium">
+            Impact
+          </p>
+          <ul className="space-y-3">
+            {[
+              "200+ enterprise customer accounts enrolled in the alpha program within weeks of launch.",
+              "More than 400 structured feedback interactions collected through internal strategist sessions and Slack feedback channels.",
+              "Established a new conceptual model for evaluating website content through topic structure rather than keyword rankings.",
+              "Helped inform the design direction for the company's emerging AEO initiatives.",
+            ].map((item) => (
+              <li key={item} className="flex gap-3">
+                <span className="mt-[0.55em] w-1 h-1 rounded-full bg-[var(--color-light-grey)] shrink-0" />
+                <span className={bodyText}>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>{/* end 30s insight / highlight / impact wrapper */}
+
       {/* ── Body: Sidebar + Content ────────────────────────────────────────── */}
       <div className="px-8 md:px-12 max-w-6xl mx-auto w-full">
         <div className="flex gap-16 xl:gap-20 items-start">
@@ -100,7 +179,7 @@ export default function AITopicMapPage() {
           {/* Sidebar — sticky, desktop only */}
           <aside className="hidden lg:block w-48 xl:w-52 shrink-0">
             <div className="sticky top-28">
-              <SidebarNav />
+              <SidebarNav sections={sidebarSections} />
             </div>
           </aside>
 
@@ -108,389 +187,511 @@ export default function AITopicMapPage() {
           <div className="flex-1 min-w-0 max-w-2xl">
             <div className="space-y-20">
 
-              {/* ── Introduction ─────────────────────────────────────────── */}
-              <div className="space-y-8">
-                <p className={`${bodyText} text-[18px] text-[var(--color-charcoal)]`}>
-                  As search increasingly shifts toward AI-driven discovery, content
-                  visibility is no longer determined purely by keyword rankings. Large
-                  language models interpret and synthesize information based on semantic
-                  understanding — and this creates a new challenge for enterprise content
-                  teams: how do we understand our website in terms of topics, not just keywords?
-                </p>
-                <p className={bodyText}>
-                  AI Topic Maps explores this problem by transforming a website into a
-                  semantic topic landscape. By combining embedding-based clustering with
-                  LLM-generated labels, the system organizes thousands of pages into
-                  interpretable topic clusters, revealing topical coverage, content gaps,
-                  and strategic opportunities.
-                </p>
+              {/* ── Context: The Swarm Initiative ────────────────────────── */}
+              <section id="swarm-initiative" className={sectionClass}>
+                <h2 className={sectionHeading}>Context: The Swarm Initiative</h2>
+                <div className={`space-y-5 ${bodyText}`}>
+                  <p>
+                    In early 2025, Conductor launched a company-wide Product Swarm
+                    initiative — a time-bound rapid MVP experimentation program designed
+                    to explore new product directions in response to the accelerating
+                    shift toward AI-driven search.
+                  </p>
+                  <p>
+                    Unlike traditional product cycles, the swarm model used small
+                    cross-functional pods with eight-week delivery windows. The goal was
+                    not to ship a perfect product but to quickly test whether new
+                    directions were viable and valuable.
+                  </p>
+                  <p>
+                    One pod explored a concept called Topic Clustering and Content Gap
+                    Identification. The goal was to enable users to understand how their
+                    website content clusters into thematic groups, identify gaps in
+                    topical coverage, and explore relationships across their entire site
+                    — rather than analyzing individual keywords or URLs in isolation.
+                  </p>
+                  <p>This exploration eventually evolved into the AI Topic Map concept.</p>
+                </div>
+              </section>
 
-                {/* My Role */}
-                <div className="pt-2">
-                  <p className="text-[10px] tracking-[0.15em] uppercase text-[var(--color-light-grey)] mb-4 font-medium">
-                    My Role
+              <CaseStudyImage
+                label="Swarm timeline diagram — 8-week sprint structure and team pod composition"
+                aspectRatio="16/7"
+              />
+
+              {/* ── Understanding the System ─────────────────────────────── */}
+              <section id="understanding-system" className={sectionClass}>
+                <h2 className={sectionHeading}>Understanding the System</h2>
+                <div className={`space-y-5 ${bodyText}`}>
+                  <p>
+                    Before designing the interface, I worked closely with ML and data
+                    platform engineers to understand how the clustering pipeline
+                    functioned. The clustering pipeline itself was designed and
+                    implemented by the engineering team.
                   </p>
-                  <p className={`${bodyText} mb-5`}>
-                    I was the product designer on this project, working with high-level
-                    supervision from my design manager. I owned all UX decisions day-to-day,
-                    from early concept exploration through to the shipped interface. My work
-                    spanned three interconnected responsibilities:
+                  <p>
+                    The underlying system processes large website datasets through a
+                    multi-stage pipeline:
                   </p>
-                  <ul className="space-y-3">
+                  <ol className="space-y-4 mt-2">
                     {[
-                      ["System comprehension", "working closely with ML engineers to understand the clustering pipeline, data structure, and its constraints before designing a single screen"],
-                      ["Interaction model definition", "identifying the right visualization paradigm and defining how users would explore, select, and act on topic clusters"],
-                      ["Design advocacy", "using early wireframes to align the team around a spatial map model when the product direction was still undecided"],
-                    ].map(([title, desc]) => (
-                      <li key={title} className="flex gap-3">
-                        <span className="mt-[0.45em] w-1 h-1 rounded-full bg-[var(--color-light-grey)] shrink-0" />
-                        <span className={bodyText}>
-                          <span className="text-[var(--color-charcoal)] font-medium">{title}:</span>{" "}
+                      ["Embedding", "Pages are converted into vector representations based on semantic content."],
+                      ["Clustering", "Pages are grouped by semantic similarity using an unsupervised algorithm."],
+                      ["Labeling", "A large language model generates human-readable names for each cluster."],
+                    ].map(([title, desc], i) => (
+                      <li key={title} className="flex gap-4">
+                        <span className="shrink-0 w-6 h-6 rounded-full border border-[var(--color-border)] flex items-center justify-center text-[11px] text-[var(--color-light-grey)] font-medium mt-0.5">
+                          {i + 1}
+                        </span>
+                        <span>
+                          <span className="text-[var(--color-charcoal)] font-medium">{title}. </span>
                           {desc}
                         </span>
                       </li>
                     ))}
+                  </ol>
+                  <p>Each cluster represents a potential topic area within the website.</p>
+                  <p>Key questions I needed to answer before designing included:</p>
+                  <ul className="space-y-2">
+                    {[
+                      "What exactly does a cluster represent — is it deterministic or probabilistic?",
+                      "How consistent are clusters across different runs?",
+                      "What metadata is available per cluster?",
+                      "How large can clusters become for enterprise-scale websites?",
+                    ].map((q) => (
+                      <li key={q} className="flex gap-3">
+                        <span className="mt-[0.55em] w-1 h-1 rounded-full bg-[var(--color-light-grey)] shrink-0" />
+                        <span>{q}</span>
+                      </li>
+                    ))}
                   </ul>
+                  <p>
+                    These answers shaped what interactions were feasible, what
+                    constraints I had to design around, and how I would communicate
+                    the system to users without misrepresenting it.
+                  </p>
                 </div>
 
-                {/* Data note */}
-                <div className="border-l-2 border-[var(--color-border)] pl-5">
+                <div className="border-l-2 border-[var(--color-border)] pl-5 mt-8">
                   <p className={`${bodyText} text-[15px]`}>
-                    <span className="text-[var(--color-charcoal)] font-medium">A note on data: </span>
-                    Because this was a swarm-phase MVP, the system used keyword, traffic, and
-                    MSV data as sample inputs to validate the methodology. AI-specific traffic
-                    and AEO signals were being developed in parallel by a separate team. The
-                    goal of this phase was not to build a complete AI data product, but to test
-                    whether the semantic clustering approach was viable and valuable — with real
-                    AI data to follow in future iterations.
-                  </p>
-                </div>
-              </div>
-
-              <hr className="border-[var(--color-border)]" />
-
-              {/* ── Section 1: Swarm Initiative ──────────────────────────── */}
-              <section id="swarm-initiative" className={sectionClass}>
-                <h2 className={sectionHeading}>The Swarm Initiative</h2>
-                <div className={`space-y-5 ${bodyText}`}>
-                  <p>
-                    In early 2025, Conductor launched a company-wide Product Swarm initiative
-                    to rapidly explore new product capabilities in response to the accelerating
-                    shift toward AI-driven search.
-                  </p>
-                  <p>
-                    Unlike traditional product cycles, the swarm model prioritized small
-                    cross-functional pods, time-bound delivery, and rapid MVP experimentation.
-                    The goal was not to perfect a solution, but to quickly test new directions
-                    for the future of the platform. The swarm ran for 8 weeks (March to May
-                    2025) and focused on delivering exploratory features aligned with the
-                    company's AI search strategy.
-                  </p>
-                  <p>
-                    One of the swarm pods explored a concept called Topic Clustering and
-                    Content Gap Identification. The goal was to enable users to understand how
-                    their website content clusters into thematic groups, identify gaps in
-                    topical coverage, and explore relationships between pages across their
-                    site — rather than analyzing individual keywords or URLs in isolation.
-                    This exploration eventually evolved into the AI Topic Map concept.
+                    <span className="text-[var(--color-charcoal)] font-medium">A note on data. </span>
+                    During the swarm phase, keyword, traffic, and MSV data served as
+                    proxy input signals. This allowed the team to validate the clustering
+                    methodology quickly without waiting for AI search data infrastructure
+                    to be ready. The clustering logic itself was independent of the input
+                    data type, meaning it could later incorporate AI search signals.
                   </p>
                 </div>
               </section>
 
-              {/* ── Section 2: The System ────────────────────────────────── */}
-              <section id="the-system" className={sectionClass}>
-                <h2 className={sectionHeading}>The System</h2>
-                <div className={`space-y-5 ${bodyText}`}>
-                  <p>
-                    The underlying system processes large website datasets through a
-                    multi-stage pipeline: pages are converted into vector embeddings,
-                    clustered by semantic similarity, and then labeled by an LLM to produce
-                    human-readable topic names. Each cluster represents a potential topic
-                    area within the website.
-                  </p>
-                  <p>
-                    During the swarm phase, keyword, traffic, and MSV data served as the
-                    input signals. This was a deliberate proxy choice that let the team
-                    validate the clustering methodology quickly without waiting for AI search
-                    data infrastructure to be ready. The semantic clustering logic itself was
-                    independent of the input data type — which meant the approach could be
-                    validated with available data and upgraded later.
-                  </p>
-                  <p>
-                    The engineering pipeline could produce clusters reliably, but the outputs
-                    were not yet usable as a product. Raw cluster data meant nothing to a
-                    content strategist staring at a table of page IDs. My challenge as the
-                    designer was to build an interface that would allow users to interpret
-                    and act on these clusters, transforming ML outputs into strategic decisions.
-                  </p>
-                  <p>
-                    Before sketching a single screen, I worked closely with the ML and data
-                    platform engineers to understand how the clustering system actually
-                    behaved. I needed answers to questions with direct design implications:
-                    what exactly does a cluster represent — is it deterministic or
-                    probabilistic? How consistent are clusters across different runs? What
-                    metadata is available per cluster? How large can clusters become for
-                    enterprise-scale websites? This step directly shaped what interactions
-                    were feasible, what constraints I had to design around, and how I would
-                    explain the system to users without misrepresenting it.
-                  </p>
-                </div>
-              </section>
+              <CaseStudyImage
+                label="System pipeline diagram — Embedding → Clustering → LLM Labeling, with pages going in and topic clusters coming out"
+                aspectRatio="16/7"
+              />
 
-              {/* ── Section 3: Users ─────────────────────────────────────── */}
+              {/* ── Users ────────────────────────────────────────────────── */}
               <section id="users" className={sectionClass}>
                 <h2 className={sectionHeading}>Users</h2>
                 <div className={`space-y-5 ${bodyText}`}>
-                  <h3 className={subHeading}>Primary user: Content Strategist</h3>
+                  <h3 className={subHeading}>Primary User: Content Strategist</h3>
                   <p>
-                    To define the right product direction, I conducted user interviews and
-                    worked with the PM to synthesize findings from existing customer research.
-                    Content strategists at enterprise organizations consistently surfaced
-                    the same friction:
+                    To define the right product direction, I worked with the PM to
+                    review existing customer research and conducted internal validation
+                    sessions with Conductor content strategists using pre-alpha customer
+                    accounts.
                   </p>
-                  <ul className="space-y-3 mt-2">
+                  <p>
+                    Content strategists at enterprise organizations consistently surfaced
+                    the same frustrations:
+                  </p>
+                </div>
+
+                <div className="space-y-7 mt-7">
+                  {[
+                    ["01", "No structural view of their content", "They managed ecosystems of hundreds or thousands of pages but had no way to see what topics they actually covered as a whole."],
+                    ["02", "Keyword rankings as an incomplete proxy", "Rankings told them which pages were performing but not whether they had strong topical coverage in any given area."],
+                    ["03", "Intuition-driven planning", "Decisions about what to write, what to consolidate, or what to remove were largely based on intuition because structural insight was missing."],
+                    ["04", "Hidden cannibalization", "Multiple pages competing for the same topic were extremely difficult to identify without a structural overview of the content ecosystem."],
+                  ].map(([num, title, desc]) => (
+                    <div key={num} className="flex gap-5">
+                      <span className="shrink-0 text-[11px] tracking-[0.08em] text-[var(--color-light-grey)] font-medium pt-[3px]">
+                        {num}
+                      </span>
+                      <div>
+                        <p className="text-[var(--color-charcoal)] font-medium text-[17px] mb-1.5">{title}</p>
+                        <p className={bodyText}>{desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className={`space-y-5 ${bodyText} mt-10`}>
+                  <h3 className={subHeading}>Research synthesis</h3>
+                  <p>
+                    These findings established a two-level design requirement: users
+                    needed high-level structural insight into how their content was
+                    organized as a landscape, and page-level actionability that would
+                    help them determine which pages required action.
+                  </p>
+                </div>
+              </section>
+
+              <CaseStudyImage
+                label="User research synthesis — affinity map, persona card, or key insight quotes from user interviews"
+                aspectRatio="4/3"
+              />
+              <CaseStudyImage
+                label="User journey map — content strategist's current workflow, pain points, and opportunity areas"
+                aspectRatio="16/7"
+              />
+
+              {/* ── Product Direction ────────────────────────────────────── */}
+              <section id="product-direction" className={sectionClass}>
+                <h2 className={sectionHeading}>Product Direction: What We Explored First</h2>
+                <div className={`space-y-5 ${bodyText}`}>
+                  <p>
+                    At the start of the project, the product direction was open. The
+                    engineering team had clustering outputs, but how to present this
+                    information to users was an unresolved design question.
+                  </p>
+                  <p>I explored two initial directions before arriving at the Topic Map.</p>
+                </div>
+
+                {/* Direction 1 */}
+                <div className="mt-12">
+                  <h3 className="font-serif text-xl text-[var(--color-charcoal)] leading-snug mb-4">
+                    Direction 1: Topic Cluster Dashboard
+                  </h3>
+                  <p className={`${bodyText} mb-6`}>
+                    Our initial concept followed familiar enterprise analytics patterns.
+                    Each topic cluster was represented as a card showing cluster health,
+                    pages requiring optimization, and suggested new topics.
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {[
-                      "They managed large content ecosystems — often hundreds or thousands of pages — but had no structural view of what topics they actually covered",
-                      "They relied on keyword rankings as a proxy for topical strength, but found this an incomplete picture",
-                      "Content planning decisions (what to write next, what to consolidate, what to cut) were largely intuition-driven due to lack of structural insight",
-                      "They struggled to identify when multiple pages were competing for the same topic, leading to cannibalization they could not easily detect",
+                      ["What worked", "Consistent with existing B2B analytics patterns. Easy to scan individual topics."],
+                      ["What did not work", "The dashboard summarized individual topics well but completely obscured relationships between them. Users could understand a topic in isolation but could not perceive the structure of their content ecosystem."],
+                    ].map(([label, text]) => (
+                      <div key={label} className="p-5 rounded-xl border border-[var(--color-border)] bg-[var(--color-cream)]">
+                        <p className="text-[10px] tracking-[0.12em] uppercase text-[var(--color-light-grey)] font-medium mb-3">{label}</p>
+                        <p className={`${bodyText} text-[15px]`}>{text}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </section>
+
+              <CaseStudyImage
+                label="Direction 1 explorations — dashboard wireframes showing topic cluster cards with health indicators and page lists"
+                aspectRatio="16/9"
+              />
+
+              {/* Direction 2 */}
+              <div>
+                <h3 className="font-serif text-xl text-[var(--color-charcoal)] leading-snug mb-4">
+                  Direction 2: Performance-Based Topic Reports
+                </h3>
+                <p className={`${bodyText} mb-6`}>
+                  To align with existing SEO workflows, we explored a version that
+                  emphasized performance metrics such as modeled traffic over time,
+                  keyword rankings, and cluster health indicators.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    ["What worked", "Familiar to enterprise users and aligned with existing reporting models."],
+                    ["What did not work", "The underlying system was semantic, but the interface still forced the data into traditional keyword performance frames. This limited the system's ability to reveal the structure of a website's content."],
+                  ].map(([label, text]) => (
+                    <div key={label} className="p-5 rounded-xl border border-[var(--color-border)] bg-[var(--color-cream)]">
+                      <p className="text-[10px] tracking-[0.12em] uppercase text-[var(--color-light-grey)] font-medium mb-3">{label}</p>
+                      <p className={`${bodyText} text-[15px]`}>{text}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <CaseStudyImage
+                label="Direction 2 explorations — performance report wireframes showing traffic trends, ranking charts, and cluster health metrics per topic"
+                aspectRatio="16/9"
+              />
+
+              {/* ── The Pivot ────────────────────────────────────────────── */}
+              <section id="the-pivot" className={sectionClass}>
+                <h2 className={sectionHeading}>The Pivot</h2>
+                <div className={`space-y-5 ${bodyText}`}>
+                  <p>
+                    Through this exploration, I identified that the system was revealing
+                    the topical structure of a website rather than traditional ranking
+                    performance.
+                  </p>
+                  <p>
+                    This raised a new design question: if a website can be understood
+                    as a semantic landscape, should the interface represent that
+                    structure spatially?
+                  </p>
+                  <p>
+                    To ground this idea, I created rough wireframes that illustrated a
+                    spatial bubble map concept. These wireframes were not intended as
+                    final designs but as tools for thinking and discussion.
+                  </p>
+                  <p>
+                    Seeing a concrete visualization helped the team align around the
+                    idea quickly. The wireframes became the foundation for the direction
+                    we pursued.
+                  </p>
+                </div>
+              </section>
+
+              <CaseStudyImage
+                label="First rough wireframe — low-fidelity sketch showing clusters as circles arranged spatially on a canvas"
+                aspectRatio="4/3"
+              />
+
+              {/* ── Visualization: Choosing the Bubble Map ───────────────── */}
+              <section id="visualization" className={sectionClass}>
+                <h2 className={sectionHeading}>Visualization: Choosing the Bubble Map</h2>
+                <div className={`space-y-5 ${bodyText} mb-8`}>
+                  <p>
+                    Before committing to the spatial bubble map, I evaluated several
+                    visualization approaches.
+                  </p>
+                </div>
+
+                {/* Comparison table */}
+                <div className="space-y-3 mb-12">
+                  {[
+                    {
+                      name: "Tree map",
+                      strength: "Shows hierarchy clearly.",
+                      limitation: "Implies a fixed taxonomy that the clustering system does not produce.",
+                    },
+                    {
+                      name: "Force-directed graph",
+                      strength: "Precise relationship mapping.",
+                      limitation: "Too visually dense for non-technical content teams.",
+                    },
+                    {
+                      name: "Hierarchical list",
+                      strength: "Familiar and easy to scan.",
+                      limitation: "Removes the spatial relationships that make clustering meaningful.",
+                    },
+                    {
+                      name: "Spatial bubble map",
+                      strength: "Visually immediate, intuitively relational, and scalable.",
+                      limitation: null,
+                    },
+                  ].map(({ name, strength, limitation }) => (
+                    <div
+                      key={name}
+                      className={`grid grid-cols-[1fr_1fr_1fr] gap-4 p-5 rounded-xl border ${
+                        !limitation
+                          ? "border-[var(--color-charcoal)] bg-[var(--color-cream)]"
+                          : "border-[var(--color-border)] bg-[var(--color-cream)]"
+                      }`}
+                    >
+                      <p className="text-[var(--color-charcoal)] font-medium text-[15px]">{name}</p>
+                      <div>
+                        <p className="text-[10px] tracking-[0.1em] uppercase text-[var(--color-light-grey)] font-medium mb-1.5">
+                          Strength
+                        </p>
+                        <p className={`${bodyText} text-[14px]`}>{strength}</p>
+                      </div>
+                      <div>
+                        {limitation ? (
+                          <>
+                            <p className="text-[10px] tracking-[0.1em] uppercase text-[var(--color-light-grey)] font-medium mb-1.5">
+                              Limitation
+                            </p>
+                            <p className={`${bodyText} text-[14px]`}>{limitation}</p>
+                          </>
+                        ) : (
+                          <p className="text-[10px] tracking-[0.1em] uppercase text-[var(--color-charcoal)] font-medium">
+                            Selected ↑
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className={`space-y-5 ${bodyText}`}>
+                  <h3 className={subHeading}>Why the bubble map worked</h3>
+                  <p>In the spatial bubble map model:</p>
+                  <ul className="space-y-2">
+                    {[
+                      "Each bubble represents one topic cluster.",
+                      "Bubble size reflects cluster size or traffic potential.",
+                      "Spatial proximity represents semantic similarity between topics.",
                     ].map((item) => (
                       <li key={item} className="flex gap-3">
-                        <span className="mt-[0.45em] w-1 h-1 rounded-full bg-[var(--color-light-grey)] shrink-0" />
+                        <span className="mt-[0.55em] w-1 h-1 rounded-full bg-[var(--color-light-grey)] shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
                   </ul>
                   <p>
-                    These findings anchored the design direction: users needed both
-                    high-level structural insight (how is our content organized as a
-                    landscape?) and page-level actionability (which specific pages do
-                    I act on?).
+                    This allows users to quickly understand which topics dominate their
+                    website, how topics relate to each other, and where potential content
+                    gaps exist.
                   </p>
                 </div>
               </section>
 
-              {/* ── Section 4: Product Direction ─────────────────────────── */}
-              <section id="product-direction" className={sectionClass}>
-                <h2 className={sectionHeading}>Product Direction</h2>
-                <div className={`space-y-5 ${bodyText}`}>
-                  <p>
-                    At the start of the project, the product direction was genuinely open.
-                    The engineering team had produced clustering outputs, but how to present
-                    this information to users was an unresolved design question. Our
-                    exploration ran through two directions before arriving at the topic map.
-                  </p>
-
-                  <h3 className={subHeading}>Direction 1: Topic Cluster Dashboard</h3>
-                  <p>
-                    Our initial concept followed familiar enterprise analytics patterns. Each
-                    topic cluster was represented as a card showing cluster health, pages
-                    requiring optimization, and suggested new topics. This was consistent
-                    with existing B2B design conventions and felt safe.
-                  </p>
-                  <p>
-                    During internal testing, a key limitation emerged: the dashboard
-                    summarized individual topics well, but completely obscured relationships
-                    between them. Users could understand a topic in isolation but could not
-                    perceive the structure of their content ecosystem.
-                  </p>
-
-                  <h3 className={subHeading}>Direction 2: Performance-Based Topic Reports</h3>
-                  <p>
-                    To align with existing SEO workflows, we explored a version that
-                    emphasized performance metrics: modeled traffic over time, keyword
-                    rankings, and cluster health indicators. This format was familiar to
-                    enterprise users.
-                  </p>
-                  <p>
-                    However, this approach created a conceptual mismatch: the underlying
-                    system was semantic, yet the interface was still forcing the data through
-                    keyword performance frames. We were dressing new thinking in old clothes.
-                  </p>
-                </div>
-              </section>
-
-              {/* Image: Dashboard direction explorations */}
               <CaseStudyImage
-                label="Dashboard direction explorations"
+                label="Visualization comparison sketches — tree map, force-directed graph, and bubble map side by side with annotations on trade-offs"
+                aspectRatio="16/9"
+              />
+              <CaseStudyImage
+                label="Final topic map UI — full screenshot of the spatial bubble map with labeled clusters, showing size variation and spatial groupings"
                 aspectRatio="16/9"
               />
 
-              {/* ── Section 5: The Pivot ─────────────────────────────────── */}
-              <section id="the-pivot" className={sectionClass}>
-                <h2 className={sectionHeading}>The Pivot</h2>
-                <div className={`space-y-5 ${bodyText}`}>
-                  <p>
-                    Both earlier directions tried to adapt the clustering output to familiar
-                    patterns. Through this process, the team began to recognize that the
-                    system was revealing something fundamentally different from traditional
-                    SEO tools — revealing not ranking performance but the topical structure
-                    of a website itself.
-                  </p>
-                  <p>
-                    This insight raised a new design question: if a website can be understood
-                    as a semantic landscape, should the interface represent that structure
-                    spatially?
-                  </p>
-                  <p>
-                    The team was open to exploring this, but the concept was abstract. To
-                    ground the discussion, I created a set of rough wireframes showing what
-                    a spatial bubble map could look like — not as a final proposal but as a
-                    thinking tool. Seeing a concrete visualization of topic clusters arranged
-                    spatially helped the team align around the idea faster than any verbal
-                    description had. The wireframes became the anchor for moving forward.
-                  </p>
-                </div>
-              </section>
-
-              {/* Image: First bubble map wireframe */}
-              <CaseStudyImage
-                label="First spatial bubble map wireframe"
-                aspectRatio="4/3"
-              />
-
-              {/* ── Section 6: Topic Map ─────────────────────────────────── */}
-              <section id="topic-map" className={sectionClass}>
-                <h2 className={sectionHeading}>Topic Map</h2>
-                <div className={`space-y-5 ${bodyText}`}>
-                  <p>
-                    In the spatial bubble map model, each bubble represents a topic cluster,
-                    bubble size encodes cluster size or traffic potential, and spatial
-                    proximity reflects semantic similarity between topics.
-                  </p>
-                  <p>
-                    This visualization allows users to quickly understand which topics
-                    dominate their website, how topics relate to and cluster around each
-                    other, and where white space or potential content gaps exist in
-                    the landscape.
-                  </p>
-                  <p>
-                    I also considered alternative visualization approaches before committing
-                    to the bubble map. A tree map would have shown hierarchical structure
-                    well but implied a fixed taxonomy that the clustering system did not
-                    actually produce. A force-directed graph would have shown relationships
-                    more precisely but at the cost of interpretability — too visually noisy
-                    for non-technical content teams. A hierarchical list would have been
-                    familiar but would have entirely lost the spatial, relational quality
-                    that made the clustering output meaningful.
-                  </p>
-                  <p>
-                    The bubble map struck the right balance: visually immediate, intuitively
-                    relational, and scalable to enterprise-level data with appropriate
-                    aggregation.
-                  </p>
-                </div>
-              </section>
-
-              {/* Image: Final topic map UI */}
-              <CaseStudyImage
-                label="Final topic map UI"
-                aspectRatio="16/9"
-              />
-
-              {/* ── Section 7: Actionability ─────────────────────────────── */}
+              {/* ── Designing for Actionability ──────────────────────────── */}
               <section id="actionability" className={sectionClass}>
-                <h2 className={sectionHeading}>Actionability</h2>
+                <h2 className={sectionHeading}>Designing for Actionability</h2>
                 <div className={`space-y-5 ${bodyText}`}>
                   <p>
-                    Early user testing showed that people could quickly understand and
-                    explore the bubble map, but a new problem emerged. Users found the
-                    visualization compelling but were unsure what to do next. The map made
-                    the data visible, but not actionable.
+                    During internal strategist testing with real customer accounts,
+                    people could quickly understand and explore the bubble map. However,
+                    another problem appeared.
+                  </p>
+                  <p>
+                    Users found the visualization compelling but were unsure what to do
+                    next. The map made the structure visible but did not immediately
+                    suggest actions.
                   </p>
 
-                  <h3 className={subHeading}>Designing the insight panel</h3>
+                  <h3 className={subHeading}>The insight panel</h3>
                   <p>
-                    To bridge exploration and action, I designed a contextual insights panel
-                    that surfaces structured guidance when a user selects a cluster. The
-                    panel operates at three levels:
+                    To bridge exploration and action, I designed a contextual insight
+                    panel that surfaces structured guidance when a user selects a cluster.
                   </p>
-                  <ul className="space-y-3">
-                    {[
-                      ["Topic-level insights", "a summary of the cluster's topical coverage and performance signals"],
-                      ["Content opportunities", "suggested new topics or pages that could strengthen coverage in this area"],
-                      ["Page-level actions", "specific pages that should be optimized, expanded, or consolidated"],
-                    ].map(([title, desc]) => (
-                      <li key={title} className="flex gap-3">
-                        <span className="mt-[0.45em] w-1 h-1 rounded-full bg-[var(--color-light-grey)] shrink-0" />
-                        <span>
-                          <span className="text-[var(--color-charcoal)] font-medium">{title}: </span>
-                          {desc}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                  <p>
-                    This interaction model connects the exploratory visualization with
-                    concrete, prioritized actions — turning the map from a discovery tool
-                    into a workflow entry point.
-                  </p>
-
-                  <h3 className={subHeading}>Final interaction model</h3>
-                  <p>
-                    The final system combines spatial exploration with structured insights
-                    in a four-step workflow: explore the topic landscape, providing a
-                    structural overview of the entire website's semantic coverage; select
-                    a topic cluster to focus on a specific area of interest; review topic
-                    insights and opportunities, understanding performance and identifying
-                    gaps; and take action on specific pages to optimize, expand, or
-                    create content.
-                  </p>
+                  <p>The panel operates at three levels:</p>
                 </div>
+
+                <div className="space-y-7 mt-7">
+                  {[
+                    ["01", "Topic-level insights", "A summary of the cluster's topical coverage and performance signals."],
+                    ["02", "Content opportunities", "Suggested topics or pages that could strengthen coverage in this area."],
+                    ["03", "Page-level actions", "Specific pages that could be optimized, expanded, or consolidated."],
+                  ].map(([num, title, desc]) => (
+                    <div key={num} className="flex gap-5">
+                      <span className="shrink-0 text-[11px] tracking-[0.08em] text-[var(--color-light-grey)] font-medium pt-[3px]">
+                        {num}
+                      </span>
+                      <div>
+                        <p className="text-[var(--color-charcoal)] font-medium text-[17px] mb-1.5">{title}</p>
+                        <p className={bodyText}>{desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <p className={`${bodyText} mt-8`}>
+                  This connected the exploratory visualization with concrete prioritized
+                  actions, turning the map from a discovery tool into a workflow entry point.
+                </p>
               </section>
 
-              {/* Image: Insight panel detail */}
               <CaseStudyImage
-                label="Insight panel detail"
+                label="Insight panel design explorations — early wireframes showing different information hierarchies tested"
+                aspectRatio="16/9"
+              />
+              <CaseStudyImage
+                label="Final interaction model — annotated UI showing the 4-step workflow: Explore → Select → Review → Act"
+                aspectRatio="16/9"
+              />
+              <CaseStudyImage
+                label="Insight panel detail — close-up of the final panel UI showing topic summary, content opportunities list, and page-level action items"
                 aspectRatio="16/9"
               />
 
-              {/* ── Section 8: Challenges ────────────────────────────────── */}
+              {/* ── The End-to-End Workflow ──────────────────────────────── */}
+              <section id="workflow" className={sectionClass}>
+                <h2 className={sectionHeading}>The End-to-End Workflow</h2>
+                <p className={bodyText}>
+                  The final system combines spatial exploration with structured insights
+                  in a four-step workflow.
+                </p>
+              </section>
+
+              <CaseStudyImage
+                label="Full workflow walkthrough — 4-panel visual or annotated flow showing each step of the interaction end to end"
+                aspectRatio="16/7"
+              />
+
+              {/* ── Design Challenges ────────────────────────────────────── */}
               <section id="challenges" className={sectionClass}>
-                <h2 className={sectionHeading}>Challenges</h2>
-                <div className={`space-y-5 ${bodyText}`}>
-                  <h3 className={subHeading}>Visualizing high-density data</h3>
-                  <p>
+                <h2 className={sectionHeading}>Design Challenges</h2>
+
+                {/* Challenge 01 */}
+                <div>
+                  <div className="flex gap-5 mb-4">
+                    <span className="shrink-0 text-[11px] tracking-[0.08em] text-[var(--color-light-grey)] font-medium pt-[3px]">
+                      01
+                    </span>
+                    <h3 className="font-serif text-xl text-[var(--color-charcoal)] leading-snug">
+                      Visualizing high-density data
+                    </h3>
+                  </div>
+                  <p className={`${bodyText} mb-6`}>
                     Enterprise websites often contain thousands of pages. Rendering all
-                    clusters simultaneously would create an unreadable visual field. I
-                    addressed this through cluster aggregation at the top level, zoom-based
-                    exploration to reveal sub-clusters, and progressive detail disclosure —
-                    showing summary data first with depth on demand.
+                    clusters simultaneously would create an unreadable visual field.
                   </p>
-
-                  <h3 className={subHeading}>Representing semantic relationships without overwhelming users</h3>
-                  <p>
-                    The spatial positioning of bubbles needed to communicate semantic
-                    proximity without requiring users to understand how embeddings work.
-                    The design relied on the visual metaphor of distance: nearby topics
-                    feel related, distant topics feel distinct. This let users build correct
-                    mental models without any technical explanation.
-                  </p>
-
-                  <h3 className={subHeading}>Clarifying the designer's role versus the engineer's</h3>
-                  <p>
-                    Throughout the project, I was careful to communicate clearly which
-                    decisions were design decisions versus engineering outputs. The
-                    clustering algorithm, embedding model, and LLM labeling were built by
-                    the engineering team. My role was to decide how those outputs were
-                    presented, what interactions they afforded, and how they mapped to user
-                    goals. Making that boundary visible helped the team collaborate without
-                    confusion about ownership.
-                  </p>
+                  <div className="border-l-2 border-[var(--color-border)] pl-5">
+                    <p className="text-[10px] tracking-[0.12em] uppercase text-[var(--color-light-grey)] font-medium mb-2">
+                      Solution
+                    </p>
+                    <p className={`${bodyText} text-[15px]`}>
+                      Cluster aggregation at the top level combined with zoom-based
+                      exploration and progressive detail disclosure. Users see summary
+                      information first and access deeper information on demand.
+                    </p>
+                  </div>
                 </div>
               </section>
 
-              {/* ── Section 9: Impact ────────────────────────────────────── */}
+              <CaseStudyImage
+                label="Zoom interaction — top-level aggregated view versus zoomed-in sub-cluster view"
+                aspectRatio="16/9"
+              />
+
+              {/* Challenge 02 */}
+              <div>
+                <div className="flex gap-5 mb-4">
+                  <span className="shrink-0 text-[11px] tracking-[0.08em] text-[var(--color-light-grey)] font-medium pt-[3px]">
+                    02
+                  </span>
+                  <h3 className="font-serif text-xl text-[var(--color-charcoal)] leading-snug">
+                    Representing semantic relationships clearly
+                  </h3>
+                </div>
+                <p className={`${bodyText} mb-6`}>
+                  The spatial positioning of bubbles needed to communicate semantic
+                  proximity without requiring users to understand embedding models.
+                </p>
+                <div className="border-l-2 border-[var(--color-border)] pl-5">
+                  <p className="text-[10px] tracking-[0.12em] uppercase text-[var(--color-light-grey)] font-medium mb-2">
+                    Solution
+                  </p>
+                  <p className={`${bodyText} text-[15px]`}>
+                    The interface relied on the visual metaphor of distance. Nearby
+                    clusters feel related while distant clusters feel distinct. This
+                    allowed users to build an intuitive mental model without technical
+                    explanation.
+                  </p>
+                </div>
+              </div>
+
+              {/* ── Impact ───────────────────────────────────────────────── */}
               <section id="impact" className={sectionClass}>
                 <h2 className={sectionHeading}>Impact</h2>
+
                 <div className={`space-y-5 ${bodyText} mb-10`}>
-                  <h3 className={subHeading}>Alpha launch</h3>
+                  <h3 className={subHeading}>Alpha Launch · June 2025</h3>
                   <p>
                     The swarm MVP shipped in May 2025. When the feature entered alpha
-                    release in June 2025, the response was immediate: more than 200
-                    customers enrolled in the alpha program within the first weeks — a
-                    signal that the concept resonated well beyond our internal assumptions
-                    about demand.
+                    in June 2025, feedback began to arrive quickly through strategist
+                    sessions and customer feedback channels.
                   </p>
                 </div>
 
@@ -498,72 +699,78 @@ export default function AITopicMapPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-10">
                   <StatCard
                     value="200+"
-                    label="Customers enrolled in alpha within weeks of launch"
+                    label="Customer accounts enrolled in alpha"
                   />
                   <StatCard
                     value="400+"
-                    label="Customer interactions generating consistent positive signal"
+                    label="Feedback interactions collected"
                   />
                   <StatCard
                     value="Jun 2025"
-                    label="Alpha release date"
+                    label="Alpha launch date"
                   />
                 </div>
 
                 <div className={`space-y-5 ${bodyText} mt-10`}>
-                  <h3 className={subHeading}>Customer feedback</h3>
+                  <h3 className={subHeading}>Customer Feedback</h3>
                   <p>
-                    As the alpha expanded, the customer success team ran structured sessions
-                    with enrolled customers. Across 400+ customer interactions, the design
-                    received consistently positive feedback. Customers highlighted that the
-                    spatial map made it immediately clear how their content was structured —
-                    something no previous tool had given them; that the insight panel helped
-                    them translate a visual observation into a concrete next action; and that
-                    the experience felt meaningfully different from traditional SEO dashboards.
+                    Across more than 400 feedback interactions captured through
+                    strategist sessions and Slack feedback channels, several patterns
+                    emerged:
                   </p>
-                  <p>
-                    This volume and consistency of positive signal was unusual for an
-                    alpha-stage feature, and validated the core design decisions around
-                    spatial exploration and contextual actionability.
-                  </p>
-
-                  <h3 className={subHeading}>Internal impact</h3>
-                  <p>
-                    The project also introduced a new conceptual model within Conductor
-                    Intelligence: evaluating websites through topic structure rather than
-                    keyword rankings alone. This shift became the shared foundation for
-                    both the AEO design work that followed and the parallel team's AI
-                    traffic data infrastructure.
-                  </p>
+                  <ul className="space-y-3">
+                    {[
+                      "The spatial map made it immediately clear how their content was structured.",
+                      "The insight panel helped translate visual exploration into concrete next steps.",
+                      "The experience felt meaningfully different from traditional SEO dashboards.",
+                    ].map((item) => (
+                      <li key={item} className="flex gap-3">
+                        <span className="mt-[0.55em] w-1 h-1 rounded-full bg-[var(--color-light-grey)] shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p>This consistent feedback validated the core design direction.</p>
                 </div>
               </section>
 
-              {/* ── Section 10: What's Next ──────────────────────────────── */}
+              <CaseStudyImage
+                label="Alpha launch metrics — 200+ customers and 400+ interactions"
+                aspectRatio="16/7"
+              />
+
+              {/* ── What's Next ──────────────────────────────────────────── */}
               <section id="whats-next" className={sectionClass}>
                 <h2 className={sectionHeading}>What's Next</h2>
                 <div className={`space-y-5 ${bodyText}`}>
+                  <p>The swarm ended in May 2025, but the design work continued.</p>
                   <p>
-                    The swarm ended in May 2025, but the design work continued. Between
-                    June and October 2025, I completed the AEO design for the next phase
-                    of the product, building on the same spatial map framework to
-                    incorporate AI search performance signals.
+                    Between June and October 2025, I designed the next phase of
+                    AEO-related features that build on the spatial map framework and
+                    incorporate emerging AI search performance signals.
                   </p>
                   <p>
-                    Running in parallel throughout the swarm, a separate team had been
-                    building the infrastructure for AI traffic and AEO signal collection.
-                    The two workstreams converged as intended: once real AI search data
-                    became available, it plugged directly into the clustering framework
-                    this project had validated.
+                    During the swarm, another team had been developing infrastructure
+                    for AI traffic and AEO signal collection. As those signals became
+                    available, they could be integrated into the clustering framework
+                    established in this project.
                   </p>
                   <p>
-                    This evolution enabled a shift from SEO-proxy topic maps toward true
-                    AEO topic intelligence — allowing organizations to understand not just
-                    what topics their website covers, but how effectively their content is
-                    being interpreted and cited by AI-driven search systems. The design
-                    foundation established in the swarm phase made that next chapter possible.
+                    This enables organizations to understand not only what topics their
+                    website covers but also how effectively their content is interpreted
+                    and cited by AI-driven search systems.
+                  </p>
+                  <p>
+                    The design foundation established during the swarm phase made this
+                    next stage possible.
                   </p>
                 </div>
               </section>
+
+              <CaseStudyImage
+                label="AEO next phase preview — how the topic map evolves to incorporate AI search signals"
+                aspectRatio="16/9"
+              />
 
               {/* ── Footer nav ───────────────────────────────────────────── */}
               <div className="pt-4">
